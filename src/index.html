@@ -1,0 +1,324 @@
+---
+title: "Pixel Perfect Websites | Code Stitch Web Designs | Denver, CO"
+description: "Meta description for the page"
+permalink: "/"
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Critical styles are loaded first -->
+    <link rel="stylesheet" href="/assets/css/critical.css">
+
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if kit.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="assets/css/local.css">
+    {% endif %}
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    <!-- {% include "components/home-schema.html" %} -->
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1858">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Bully Max Elite</span>
+            <h1 class="cs-title">Where Effort <br />Meets Opportunity</h1>
+            <!-- <p class="cs-text">
+                Develop confidence, composure under pressure and the discipline needed to be a champ. This is the club you’ve been looking for.
+            </p> -->
+            <div class="cs-button-group">
+                <a href="/#sbsr-1816" class="cs-button-solid cs-button1">Read More</a>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="assets/images/coach.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="assets/images/coach.jpg">
+                    <img loading="lazy" decoding="async" src="assets/images/coach.jpg" alt="icon" width="48" height="48">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">How to Get Started</h3>
+                    <p class="cs-item-text">
+                        We provide some of the finest quality, most responsive and reliable, and cost effective services and solutions.
+                    </p>
+                    <a href="/sign-up" class="cs-link">
+                        Sign Up Today
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chevron-right-red.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="assets/images/handshake.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="assets/images/handshake.jpg">
+                    <img loading="lazy" decoding="async" src="assets/images/handshake.jpg" alt="icon" width="48" height="48">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">How to Support Us</h3>
+                    <p class="cs-item-text">
+                        We provide some of the finest quality, most responsive and reliable, and cost effective services and solutions.
+                    </p>
+                    <a href="" class="cs-link">
+                        Make A Donation
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chevron-right-red.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="assets/images/football-team-hero.jpg">
+        <source media="(min-width: 601px)" srcset="assets/images/football-team-hero.jpg">
+        <img loading="lazy" decoding="async" src="assets/images/football-team-hero.jpg" alt="field" width="1920" height="1200" aria-hidden="true">
+    </picture>
+</section>                      
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1816">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="assets/images/coaching.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="assets/images/coaching.jpg">
+                <img loading="lazy" decoding="async" src="assets/images/coaching.jpg" alt="body builder" width="700" height="666">
+            </picture>
+            <!--White SVG Mask. Download the image and change the fill color to match the color of the section background below it-->
+            <img class="cs-mask cs-light" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/reverse-dark-splatter-222.svg" alt="white splatter" width="643" height="608">
+            <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+            <img class="cs-mask cs-dark" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/reverse-dark-mode-splatter-030.svg" alt="white splatter" width="643" height="608">
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Our Mission</span>
+            <h2 class="cs-title">Taking Your Game to the Next Level</h2>
+            <p class="cs-text">
+                At BME Sports Recruiting, we help athletes take their game to the next level by building personalized recruiting profiles, connecting with college coaches, and providing the tools and exposure needed to succeed. 
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-check.svg" decoding="async" alt="icon" width="20" height="20" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Kids</h3>
+                        <span class="cs-li-text">
+                            Age: 10-12
+                        </span>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-check.svg" decoding="async" alt="icon" width="20" height="20" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Juniors</h3>
+                        <span class="cs-li-text">
+                            Age: 13-15
+                        </span>
+                    </div>
+                </li>
+                <li class="cs-li">
+                    <picture class="cs-li-picture">
+                        <img class="cs-li-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/gym-check.svg" decoding="async" alt="icon" width="20" height="20" loading="lazy">
+                    </picture>
+                    <div class="cs-flex">
+                        <h3 class="cs-h3">Youths</h3>
+                        <span class="cs-li-text">
+                            Age: 16-18
+                        </span>
+                    </div>
+                </li>
+            </ul>
+            <!-- <a href="" class="cs-button-solid">Learn More</a> -->
+        </div>
+    </div>
+
+    <!--White Splash Graphic-->
+    <img class="cs-graphic cs-light" src="assets/svgs/splatter-top.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+    <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+    <img class="cs-graphic cs-dark" src="assets/svgs/splatter-top.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-1833">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Testimonials</span>
+            <h2 class="cs-title">Real People Real Results</h2>
+        </div>
+        <div class="cs-flex-group">
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/reviewer.jpg" alt="person" width="570" height="680">
+                </picture>
+
+                <!-- SVG Mask. Download the image and change the fill color to match the color of the section background below it-->
+                <img class="cs-mask cs-light" loading="lazy" decoding="async" src="/assets/svgs/paint-splash.svg" alt="white splatter" width="700" height="666">
+                <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+                <img class="cs-mask cs-dark" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/dark-splash-030.svg" alt="white splatter" width="700" height="666">
+            </div>
+            <div class="cs-review-group">
+                <!--Stars-->
+                <img class="cs-stars" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/stars-gym.svg" alt="quotes" width="97" height="80" aria-hidden="true">
+                <p class="cs-review-text">
+                    ”Great program! They use modern equipment that makes training so much easier. They really are next level!”
+                </p>
+                <span class="cs-name">John Smith</span>
+                <span class="cs-job">Parent</span>
+                <!--Quote-->
+                <img class="cs-quote" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/black-quotes.svg" alt="quotes" width="97" height="80" aria-hidden="true">
+            </div>
+        </div>
+    </div>
+    <!--Texture Graphic-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 1023px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/dotted-texture-m.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 1024px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/dotted-texture.jpg">
+        <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Graphics/dotted-texture.jpg" alt="dotted texture" width="1920" height="600">
+    </picture>
+</section>
+                                
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1900">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Our Services</span>
+                <h2 class="cs-title">How We Elevate Your Game</h2>
+            </div>
+            <button class="cs-play" aria-label="click to play video">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/play-right.svg" alt="play icon" width="24" height="24" aria-hidden="true" decoding="async">
+            </button>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3">College Exposure & Recruiting Support</h3>
+                </a>
+                <picture class="cs-item-background">
+                    <source media="(max-width: 600px)" srcset="assets/images/college.jpg">
+                    <source media="(min-width: 601px)" srcset="assets/images/college.jpg">
+                    <img decoding="async" src="assets/images/college.jpg" alt="construction" width="413" height="374" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3">Player Profiles</h3>
+                </a>
+                <picture class="cs-item-background">
+                    <source media="(max-width: 600px)" srcset="assets/images/profile.jpg">
+                    <source media="(min-width: 601px)" srcset="assets/images/profile.jpg">
+                    <img decoding="async" src="assets/images/profile.jpg" alt="construction" width="413" height="374" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3">Hudl/Film Breakdown</h3>
+                </a>
+                <picture class="cs-item-background">
+                    <source media="(max-width: 600px)" srcset="assets/images/film.jpg">
+                    <source media="(min-width: 601px)" srcset="assets/images/film.jpg">
+                    <img decoding="async" src="assets/images/film.jpg" alt="construction" width="413" height="374" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3">Transcript Review</h3>
+                </a>
+                <picture class="cs-item-background">
+                    <source media="(max-width: 600px)" srcset="assets/images/transcript.jpg">
+                    <source media="(min-width: 601px)" srcset="assets/images/transcript.jpg">
+                    <img decoding="async" src="assets/images/transcript.jpg" alt="construction" width="413" height="374" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3">Social Media Promotion</h3>
+                </a>
+                <picture class="cs-item-background">
+                    <source media="(max-width: 600px)" srcset="assets/images/social-media.jpeg">
+                    <source media="(min-width: 601px)" srcset="assets/images/social-media.jpeg">
+                    <img decoding="async" src="assets/images/social-media.jpeg" alt="construction" width="413" height="374" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3">Email Campaigns to Colleges</h3>
+                </a>
+                <picture class="cs-item-background">
+                    <source media="(max-width: 600px)" srcset="assets/images/email.jpg">
+                    <source media="(min-width: 601px)" srcset="assets/images/email.jpg">
+                    <img decoding="async" src="assets/images/email.jpg" alt="construction" width="413" height="374" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <h3 class="cs-h3">1-on-1 Recruiting Consultations</h3>
+                </a>
+                <picture class="cs-item-background">
+                    <source media="(max-width: 600px)" srcset="assets/images/consultation.jpg">
+                    <source media="(min-width: 601px)" srcset="assets/images/consultation.jpg">
+                    <img decoding="async" src="assets/images/consultation.jpg" alt="construction" width="413" height="374" aria-hidden="true">
+                </picture>
+            </li>
+        </ul>
+    </div>
+    <div class="cs-video-wrapper">
+        <!--Compress your video and upload it to a CDN like Digital Oceans Spaces so the video file doesn't cause load time issues. You can also remove the video tag and uncomment the picture tag to use a image instead of a video. Don't forget to remove the cs-play button!-->
+        <video loading="lazy" src="/assets/images/IMG_3565-edit.mp4" autoplay="false" loop muted></video>
+        <!-- <picture class="cs-picture">
+            <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png">
+            <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png">
+            <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-hero-image-2.png" alt="body builder" width="630" height="877">
+        </picture> -->
+    </div>
+    <!--Make sure to download this svg and change the fill color in a code editor to match the color of the section above this stitch-->
+    <img class="cs-graphic cs-light" src="assets/svgs/splatter-bottom.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
+    <!--download this and make sure it is the same color as the background of the section above it on dark mode so it makes it look like its one complete shape -->
+    <img class="cs-graphic cs-dark" src="assets/svgs/splatter-bottom.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async">
+</section>
+                                                                
+                                
+
+    {% include 'sections/cta.html' %}
+{% endblock %}

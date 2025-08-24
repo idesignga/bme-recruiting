@@ -1,0 +1,176 @@
+---
+title: "Project Two | Code Stitch Web Designs"
+description: "Meta description for the page"
+permalink: "/sign-up/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/sign-up.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-310">
+    <div class="cs-container">
+        <span class="cs-int-title">Sign Up Today</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/sign-up" class="cs-link cs-active">Sign Up</a>
+        </div>
+    </div>
+    <!--Background Image-->
+
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                   Contact                    -->
+<!-- ============================================ -->
+
+<section id="contact-2061">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Player Profile</span>
+            <h2 class="cs-title">Sign Up Form</h2>
+            <p class="cs-text">Orci eu lobortis elementum nibh  tellus. Vulputate eu scelerisque felis imperdiet proin fermentum leo  vel. Luctus accumsan tortor posuere ac ut consequat semper. Et pharetra  pharetra massa massa ultricies mi quis.</p>
+        </div>
+        <!--Form-->
+        <form class="cs-form" id="cs-form-2061" name="Contact Form" method="post">
+            <!-- Player Info -->
+            <label class="cs-label cs-topper">
+                Player Information
+            </label>
+            <label class="cs-label cs-split">
+                Full Name *
+                <input class="cs-input" required type="text" id="name-2061" name="Name">
+            </label>
+            <label class="cs-label cs-split">
+                Primary Position(s) *
+                <input class="cs-input" required type="text" id="position-2061" name="Position">
+            </label>
+            <label class="cs-label cs-split">
+                School *
+                <input class="cs-input" required type="text" id="school-2061" name="School">
+            </label>
+            <label class="cs-label cs-split">
+                Graduation Year *
+                <input class="cs-input" required type="text" id="grad-2061" name="Grad">
+            </label>
+            <label class="cs-label cs-split">
+                Player Phone # *
+                <input class="cs-input" required type="tel" id="phone-2061" name="Phone">
+            </label>
+            <label class="cs-label cs-split">
+                Player Email
+                <input class="cs-input" required type="email" id="email-2061" name="Email">
+            </label>
+            <!-- Recruiting Info -->
+            <label class="cs-label cs-topper">
+                Recruiting Information
+            </label>
+            <label class="cs-label">
+                Hudl/YouTube Link *
+                <input class="cs-input" required type="url" id="link-2061" name="Link">
+            </label>
+            <label class="cs-label cs-split">
+                Coach Full Name *
+                <input class="cs-input" required type="text" id="coach-2061" name="Coach">
+            </label>
+            <label class="cs-label cs-split">
+                Coach Phone # *
+                <input class="cs-input" required type="tel" id="coach-number-2061" name="Coach Number">
+            </label>
+            <label class="cs-label cs-split">
+                Coach Email
+                <input class="cs-input" required type="email" id="coach-email-2061" name="Coach Email">
+            </label>
+            <!-- Academic Info -->
+            <label class="cs-label cs-topper">
+                Academic Information
+            </label>
+            <label class="cs-label cs-split">
+                GPA *
+                <input class="cs-input" required type="text" id="gpa-2061" name="gpa">
+            </label>
+            <label class="cs-label cs-split">
+                Upload Current Transcript *
+                <input class="cs-input" required type="file" id="coach-2061" name="Coach">
+            </label>
+            <!-- Payment -->
+            <label class="cs-label cs-topper">
+                Registration Fee
+            </label>
+            <label class="cs-label">
+                $25 Non-Refundable Registration Fee is Required *
+                <select class="cs-input cs-select" required id="fee-2061" name="Fee">
+                    <option value="" disabled selected>How would you like to pay?</option>
+                    <option value="Server">CashApp</option>
+                    <option value="Chef">Zelle</option>
+                    <option value="Manager">PayPal</option>
+                    <option value="Other">Cash</option>
+                </select>
+            </label>
+            <!-- <label class="cs-label">
+                When can you start? *
+                <input class="cs-input cs-date" required type="date" id="start-date-2061" name="Start Date">
+            </label> -->
+            <!-- Parent Conset-->
+            <label class="cs-label cs-topper">
+                Parent/Guardian Consent
+            </label>
+            <label class="cs-split">
+                <em>I, the unsigned parent/guardian, give permission for my child to participate in BME Recruiting services. I confirm that the information provided is accurate; I understand that the $25 Registration Fee is required; and I grant permission for academic and athletic records to be shared with college recruiters.</em>
+            </label>
+            <label class="cs-label">
+                Parent/Guardian Full Name *
+                <input class="cs-input" required type="text" id="parent-2061" name="Parent">
+            </label>
+            <label class="cs-label cs-split">
+                Parent/Guardian Phone # *
+                <input class="cs-input" required type="tel" id="coach-number-2061" name="Coach Number">
+            </label>
+            <label class="cs-label cs-split">
+                Parent/Guardian Email *
+                <input class="cs-input" required type="email" id="coach-email-2061" name="Coach Email">
+            </label>
+            </label><label class="cs-label">
+                Parent/Guardian Signature *
+                <input class="cs-input" required type="text-area" id="parent-2061" name="Parent">
+            </label>
+            </label><label class="cs-label cs-split">
+                Date *
+                <input class="cs-input" required type="date" id="date-2061" name="Date">
+            </label>
+            <div class="cs-wrapper">
+                <button class="cs-button-solid cs-submit" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <img class="cs-graphic cs-graphic-left" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/dental-drop-green.svg" alt="drop" width="528" height="830" aria-hidden="true" decoding="async">
+    <img class="cs-graphic cs-graphic-right" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/dental-drop-blue.svg" alt="drop" width="528" height="830" aria-hidden="true" decoding="async">
+</section>
+
+
+
+    {% include 'sections/cta.html' %}
+{% endblock %}

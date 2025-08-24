@@ -1,0 +1,296 @@
+---
+title: "About | Code Stitch Web Designs"
+description: "Meta description for the page"
+permalink: "/about/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl 'assets/images/cta.jpg' | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="stylesheet" href="/assets/css/about.css">
+{% endblock %}
+
+{% block body %}
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-310">
+    <div class="cs-container">
+        <span class="cs-int-title">About</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/about" class="cs-link cs-active">About</a>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+    </picture>
+</div>
+           
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1808">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Meet</span>
+            <h2 class="cs-title">Coach E</h2>
+            <p class="cs-text">
+                This is a paragraph describing Coach E. Coach E is a very cool guy. He has been coaching football for 10 years. He is a graduate of Harvard University. He is a father of 4 beautiful kids. He is very tall. Coach E also speaks 3 languages.
+            </p>
+            <a href="" class="cs-button-solid">Contact Coach E</a>           
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-stat">Years Coaching</span>
+                <span class="cs-number">10+</span>
+            </li>
+            <li class="cs-item">
+                <span class="cs-stat">Students Helped</span>
+                <span class="cs-number">640+</span>
+            </li>
+            <li class="cs-item">
+                <span class="cs-stat">Affiliated Schools</span>
+                <span class="cs-number">200+</span>
+            </li>
+        </ul>
+    </div>
+
+    <!--Person Grpahic. To make your own background crops like this, use https://www.remove.bg/ to remove the background of images. Make sure to crop the empty space it creates around the person from the background that was removed.-->
+    <picture class="cs-person">
+        <source media="(max-width: 600px)" srcset="/assets/images/about/unsplash-2.png">
+        <source media="(min-width: 601px)" srcset="/assets/images/about/unsplash-2.png">
+        <img loading="lazy" decoding="async" src="/assets/images/about/unsplash-2.png" alt="body builder" width="702" height="617" aria-hidden="true">
+    </picture>
+
+    <!--Backgorund Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym2.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym2.jpg">
+        <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym2.jpg" alt="gym" width="1280" height="568">
+    </picture>
+
+    <!--Splash Graphic-->
+    <img class="cs-graphic cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-splatter.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+    <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+    <img class="cs-graphic cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+</section>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-1811">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Main Image-->
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/about/coach-2.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/about/coach-2.png">
+                <img loading="lazy" decoding="async" src="/assets/images/about/coach-2.png" alt="body builder" width="562" height="568">
+            </picture>
+            <!--Pink Blob-->
+            <img class="cs-splatter" loading="lazy" decoding="async" src="assets/svgs/splatter-bottom.svg" alt="red splatter" width="441" height="478">
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Meet</span>
+            <h2 class="cs-title">Coach Bagley</h2>
+            <p class="cs-text">
+                Richard Bagley he has been organizing youth sports events for 25 years. This is a paragraph about him. He is a graduate of Princeton University. He was born in Ireland, and is the father of 2.
+            </p>
+            <a href="" class="cs-button-solid" aria-label="learn more about us">Contact Coach Bagley</a>
+        </div>
+    </div>
+
+    <!--White Splash Graphic-->
+    <img class="cs-graphic cs-light" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/1d-splatter.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+    <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+    <img class="cs-graphic cs-dark" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+</section>
+
+<!-- ============================================ -->
+<!--                Meet the Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-team-1795">
+    <div class="cs-container">
+        <!--Gallery-->
+        <div class="cs-gallery">
+            <div class="cs-content">
+                <span class="cs-topper">Our Team</span>
+                <h2 class="cs-title">Meet Our Expert Instructors & Trainers</h2>
+                <a href="" class="cs-button-solid">View Our Team Members</a>
+            </div>
+            <!--Picture 1-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-1.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-1.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-1.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link" aria-label="visit instagram" target="_blank">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link" aria-label="visit facebook" target="_blank">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link" aria-label="visit twitter" target="_blank">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Tom Cruise</h3>
+                    <span class="cs-job">Coach</span>
+                </div>
+            </div>
+            <!--Picture 2-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-2.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-2.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-2.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Julia Roberst</h3>
+                    <span class="cs-job">Girls' Coach</span>
+                </div>
+            </div>
+            <!--Picture 3-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-3.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-3.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-3.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Tom Hanks</h3>
+                    <span class="cs-job">QB Specialist</span>
+                </div>
+            </div>
+            <!--Picture 4-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-4.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-4.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-4.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Denzel Washington</h3>
+                    <span class="cs-job">Offensive Specialist</span>
+                </div>
+            </div>
+            <!--Picture 5-->
+            <div class="cs-item">
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-5.png">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-5.png">
+                    <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/gym-meet-team-5.png" alt="gallery" width="305" height="400">
+                </picture>
+                <ul class="cs-socials">
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/instagram-white-red.svg" alt="instagram" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/facebook-white.svg" alt="facebook" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                    <li class="cs-social">
+                        <a href="" class="cs-link">
+                            <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/twitter-white.svg" alt="twitter" height="20" width="20" loading="lazy" decoding="async">
+                        </a>
+                    </li>
+                </ul>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Emma Watson</h3>
+                    <span class="cs-job">Event Coordinator</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+                                
+    {% include 'sections/cta.html' %}                                
+{% endblock %}
