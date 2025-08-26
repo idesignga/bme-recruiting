@@ -4,9 +4,8 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #contact-1780 {
+    #contact-1750 {
         padding: var(--sectionPadding);
-        background-color: #222;
         overflow: hidden;
         position: relative;
         z-index: 1;
@@ -15,8 +14,8 @@
             width: 100%;
             /* changes to 1024 on desktop */
             max-width: (704/16rem);
-            background-color: #222;
             margin: auto;
+            background-color: #fff;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -51,7 +50,6 @@
 
         .cs-title {
             margin: 0 0 (24/16rem);
-            color: var(--bodyTextColorWhite);
         }
 
         .cs-form {
@@ -68,7 +66,7 @@
             font-size: (16/16rem);
             font-weight: 700;
             line-height: 1.2em;
-            color: var(--bodyTextColorWhite);
+            color: var(--headerColor);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -85,12 +83,12 @@
             box-sizing: border-box;
             padding: 0;
             padding-left: (24/16rem);
-            background-color: #1d1c1c;
+            background-color: #f7f7f7;
             color: var(--headerColor);
             border: none;
 
             &::placeholder {
-                color: var(--bodyTextColorWhite);
+                color: var(--bodyTextColor);
             }
         }
 
@@ -121,7 +119,7 @@
             font-size: (20/16rem);
             font-weight: 700;
             line-height: 1.2em;
-            color: var(--bodyTextColorWhite);
+            color: var(--bodyTextColor);
             display: block;
         }
 
@@ -178,7 +176,7 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #contact-1780 {
+    #contact-1750 {
         .cs-container {
             flex-direction: row;
             align-items: center;
@@ -197,7 +195,7 @@
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
-    #contact-1780 {
+    #contact-1750 {
         .cs-container {
             width: 65%;
             max-width: (1024/16rem);
@@ -227,7 +225,7 @@
 
 /* Large Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
-    #contact-1780 {
+    #contact-1750 {
         .cs-label {
             &:nth-of-type(2),
             &:nth-of-type(3) {
@@ -239,7 +237,7 @@
 
 /* Largest Desktop - 1920px */
 @media only screen and (min-width: 120rem) {
-    #contact-1780 {
+    #contact-1750 {
         padding-top: 7vw;
         padding-bottom: 9vw;
 
@@ -253,9 +251,7 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #contact-1780 {
-            background-color: var(--dark);
-
+        #contact-1750 {
             .cs-container {
                 background-color: var(--dark);
             }

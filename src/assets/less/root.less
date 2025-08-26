@@ -14,7 +14,7 @@
     /* All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
     :root {
         --primary: #fa4616;
-        --primaryLight: #fa4616;
+        --primaryLight: #0021A5;
         --secondary: #0021A5;
         --secondaryLight: #0021A5;
         --headerColor: #1a1a1a;
@@ -22,8 +22,8 @@
         --bodyTextColorWhite: #fafbfc;
 
         /* Dark Mode Styles */
-        --dark: #002657;
-        --medium: #0021A5;
+        --dark: #082032;
+        --medium: #002657;
         --accent: #334756;
 
         /* 13px - 16px */
@@ -46,6 +46,10 @@ body {
 *, *:before, *:after {
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
+}
+
+.gator-blue {
+    color: #0021A5;
 }
 .cs-topper {
     font-size: var(--topperFontSize);
@@ -109,6 +113,18 @@ body {
         letter-spacing: 0.1em;
         font-weight: 700;
         color: var(--primary);
+        margin-bottom: 0.25rem;
+        display: block;
+    }
+
+        .cs-topper-blue {
+        font-size: var(--topperFontSize);
+        line-height: 1.2em;
+        text-transform: uppercase;
+        text-align: inherit;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--secondary);
         margin-bottom: 0.25rem;
         display: block;
     }
@@ -284,7 +300,11 @@ body {
         h6 {
             color: #fff;
         }
+
+        .cs-modal-text {
+            color: #000;
     }
+}
 }
 
 /* Fonts */
@@ -1974,6 +1994,13 @@ html {
             /* 24px - 40px */
             margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
             color: var(--bodyTextColorWhite);
+            opacity: 0.8;
+        }
+
+        .cs-modal-text {max-width: (704/16rem);
+            /* 24px - 40px */
+            margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
+            color: #000;
             opacity: 0.8;
         }
 

@@ -4,11 +4,10 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #sbsr-1816 {
+    #sbsr-1814 {
         padding: var(--sectionPadding);
         /* 100px - 200px */
         padding-bottom: clamp(6.25rem, 8vw, 12.5rem);
-        background-color: #222;
         /* clips anything overflowing */
         overflow: hidden;
         position: relative;
@@ -39,14 +38,8 @@
             z-index: 3;
         }
 
-        .cs-title, .cs-text {
-            color: var(--bodyTextColorWhite);
-        }
-
         .cs-text {
             margin-bottom: (16/16rem);
-            opacity: .8;
-
             &:last-of-type {
                 margin-bottom: (32/16rem);
             }
@@ -95,7 +88,8 @@
                 content: '';
                 width: 100%;
                 height: 100%;
-                background: #1D1C1C;
+                background: var(--primary);
+                opacity: .1;
                 position: absolute;
                 display: block;
                 top: 0;
@@ -119,8 +113,7 @@
             letter-spacing: .1em;
             text-align: left;
             margin: 0 0 (12/16rem) 0;
-            color: var(--bodyTextColorWhite);
-            opacity: .8;
+            color: var(--bodyTextColor);
         }
 
         .cs-li-text {
@@ -129,7 +122,47 @@
             line-height: 1.2em;
             text-align: left;
             margin: 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--headerColor);
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+	    	font-weight: 700;
+	        text-align: center;
+            margin: 0;
+            color: #fff;
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--primary);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: #000;
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width .3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
         }
 
         .cs-image-group {
@@ -187,7 +220,7 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #sbsr-1816 {
+    #sbsr-1814 {
         .cs-container {
             max-width: (1280/16rem);
             flex-direction: row;
@@ -215,7 +248,7 @@
 
 /* Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
-    #sbsr-1816 {
+    #sbsr-1814 {
         .cs-image-group {
             font-size: inherit;
         }
@@ -225,6 +258,40 @@
         }
     }
 }
+
+/* Large Desktop - 2000px */
+@media only screen and (min-width: 125rem) {
+    #sbsr-1814 {
+        /* pushes down when the screen size gets too big and the graphic starts getting too tall and creeps up on the content above it */
+        padding-top: 0%;
+        padding-bottom: 9vw;
+    }
+}
+
+/* Dark Mode */
+@media only screen and (min-width: 0rem) {
+    body.dark-mode {
+        #sbsr-1814 { 
+            .cs-title, .cs-text, .cs-li-text, .cs-h3 {
+                color: var(--bodyTextColorWhite);
+                transition: color .3s;
+            }
+
+            .cs-text, .cs-h3 {
+                opacity: .8;
+            }
+
+            .cs-light {
+                display: none;
+            }
+
+            .cs-dark {
+                display: block;
+            }
+        }
+    }
+}
+                                
 
 /* Large Desktop - 2000px */
 @media only screen and (min-width: 125rem) {
@@ -257,10 +324,9 @@
 
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-    #reviews-1833 {
+    #reviews-1832 {
         padding: var(--sectionPadding);
         overflow: hidden;
-        background-color: #222222;
         position: relative;
         z-index: 1;
 
@@ -269,7 +335,7 @@
             content: '';
             width: 100%;
             height: 20%;
-            background: linear-gradient(to bottom,  #121212 0%,rgba(34, 34, 34,0) 100%);
+            // background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
             opacity: 1;
             position: absolute;
             display: block;
@@ -282,7 +348,7 @@
             content: '';
             width: 100%;
             height: 20%;
-            background: linear-gradient(to bottom,  rgba(34, 34, 34,0) 0%,#121212 100%);
+            // background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
             opacity: 1;
             position: absolute;
             display: block;
@@ -317,7 +383,6 @@
         .cs-title {
             max-width: 26ch;
             margin: 0;
-            color: var(--bodyTextColorWhite);
         }
 
         .cs-flex-group {
@@ -365,7 +430,7 @@
             font-weight: bold;
             text-align: inherit;
             margin: 0 0 (40/16rem) 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--headerColor);
         }
 
         .cs-name {
@@ -374,7 +439,7 @@
             text-align: inherit;
             font-weight: 700;
             margin: 0 0 (4/16rem) 0;
-            color: var(--bodyTextColorWhite);
+            color: var(--headerColor);
             display: block;
         }
 
@@ -394,7 +459,7 @@
             width: (372/16em);
             height: (352/16em);
             /* make a white shadow to fade over the texture background behind it so it hides the fact its a mask on top of the image */
-            box-shadow: rgba(34, 34, 34, 1) 0px -45px 90px 4px;
+            // box-shadow: rgba(255,255,255, 1) 0px -45px 90px 4px;
             position: relative;
             z-index: -1;
         }
@@ -465,7 +530,7 @@
                 left: 0;
                 height: 100%;
                 width: 100%;
-                opacity: .32;
+                opacity: .12;
                 /* Makes img tag act as a background image */
                 object-fit: cover;
             }
@@ -475,7 +540,7 @@
 
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
-    #reviews-1833 {
+    #reviews-1832 {
         .cs-container {
             max-width: (1280/16rem);
         }
@@ -508,16 +573,15 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
-        #reviews-1833 {
-            background-color: rgba(0, 0, 0, .6);
+        #reviews-1832 {
             &:before {
                 /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                background: linear-gradient(to bottom,  rgba(3, 13, 20,1) 0%,rgba(3, 13, 20,0) 100%);
+                background: linear-gradient(to bottom,  #002657 0%,rgba(8, 32, 50,0) 100%);
             }
 
             &:after {
                 /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                background: linear-gradient(to bottom,  rgba(3, 13, 20,0) 0%,rgba(3, 13, 20,1) 100%);
+                background: linear-gradient(to bottom,  rgba(8, 32, 50,0) 0%,#002657 100%);
             }
 
             .cs-title,
@@ -530,7 +594,7 @@
 
             .cs-image-group {
                 /* if you change the background color on dark mode, make sure to change this color to match whatever color you chose so the svg mask edges are hidden by the shadow. */
-                box-shadow: rgba(3, 13, 20, 1) 0px -45px 90px 4px;
+                box-shadow: #002657 0px -45px 90px 4px;
             }
 
             .cs-quote {
@@ -552,12 +616,12 @@
             .cs-background {
                 img {
                     filter: grayscale(1) brightness(1000%);
-                    opacity: .12;
                 }
             }
         }
     }
 }
+                                
 
 /*-- -------------------------- -->
 <---          Services          -->
