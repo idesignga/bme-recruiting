@@ -52,10 +52,22 @@ permalink: "/sign-up/"
         <div class="cs-content">
             <span class="cs-topper">Player Profile</span>
             <h2 class="cs-title">Sign Up Form</h2>
-            <p class="cs-text">Orci eu lobortis elementum nibh  tellus. Vulputate eu scelerisque felis imperdiet proin fermentum leo  vel. Luctus accumsan tortor posuere ac ut consequat semper. Et pharetra  pharetra massa massa ultricies mi quis.</p>
+            <p class="cs-text">Sign up requires a <strong>$25 Registration Fee</strong>  as well as a <strong>$100 Consultation Fee</strong> for all packages. Payments must be made via Zelle to <em>Edward Goines</em> at the number at the top of the page. </p>
         </div>
         <!--Form-->
-        <form class="cs-form" id="cs-form-2061" name="Contact Form" method="post">
+        <form class="cs-form" id="cs-form-2061" name="Contact Form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+            <!-- Package Selection -->
+            <label class="cs-label cs-topper">
+                Package Selection
+            </label>
+            <label class="cs-label">
+                <select class="cs-input cs-select" required id="fee-2061" name="Fee">
+                    <option value="" disabled selected>Select Your Package</option>
+                    <option value="Basic-Proile">Basic Profile Package — $200</option>
+                    <option value="Game-Changer">Game Changer Package — $300</option>
+                    <option value="Elite-Exposure">Elite Exposure Package — $500</option>
+                </select>
+            </label>
             <!-- Player Info -->
             <label class="cs-label cs-topper">
                 Player Information
@@ -118,17 +130,11 @@ permalink: "/sign-up/"
             </label>
             <!-- Payment -->
             <label class="cs-label cs-topper">
-                Registration Fee
+                Registration Fees
             </label>
             <label class="cs-label">
-                $25 Non-Refundable Registration Fee is Required *
-                <select class="cs-input cs-select" required id="fee-2061" name="Fee">
-                    <option value="" disabled selected>How would you like to pay?</option>
-                    <option value="Server">CashApp</option>
-                    <option value="Chef">Zelle</option>
-                    <option value="Manager">PayPal</option>
-                    <option value="Other">Cash</option>
-                </select>
+                $25 Non-Refundable Registration Fee is Required * <br>
+                Zelle To: <em>Edward Goines</em> <em>470-213-0269</em>
             </label>
             <!-- <label class="cs-label">
                 When can you start? *
