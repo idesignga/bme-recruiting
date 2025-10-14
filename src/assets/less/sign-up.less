@@ -95,6 +95,30 @@
             }
         }
 
+        .cash-app {
+
+            &:before {
+            content: "";
+            width: 150%;
+            height: 110%;
+            background: #00CF31;
+            opacity: 1;
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: -130%;
+            z-index: -2;
+            transform: skew(45deg) translateY(-50%);
+            transition: left 0.3s;
+        }
+
+        &:hover {
+            &:before {
+                left: -20%;
+            }
+        }
+    }    
+
         .cs-graphic {
             display: none;
             position: absolute;
