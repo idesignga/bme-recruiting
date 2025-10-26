@@ -1,0 +1,662 @@
+---
+title: "7v7 Academy | BME Recruiting"
+description: "Meta description for the page"
+permalink: "/7v7/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/7v7.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-310">
+    <div class="cs-container">
+        <span class="cs-int-title">BME Academy</span>
+        <div class="cs-breadcrumbs">
+            <a href="/" class="cs-link">Home</a>
+            <a href="/sign-up" class="cs-link cs-active">7v7</a>
+        </div>
+    </div>
+    <!--Background Image-->
+
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+        <!--Tablet Image-->
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+        <!--Desktop Image-->
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+        <source media="(min-width: 1024px)" srcset="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+        <img src="{% getUrl '/assets/images/cta.jpg' | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+    </picture>
+</div>
+
+<!-- ============================================ -->
+<!--                    Table                     -->
+<!-- ============================================ -->
+
+<section id="table-1835">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Coming Soon</span>
+            <h2 class="cs-title">Register for Upcoming Tryouts</h2>
+            <div class="cs-button-group">
+                <button class="cs-button cs-active" data-filter="one">
+                    Nov 8
+                </button>
+                <button class="cs-button" data-filter="two">
+                    Nov 9
+                </button>
+            </div>
+        </div>
+        <!--Table 1 - DATE-->
+        <div class="cs-table-wrapper" data-category="one">
+            <table class="cs-table">
+                <thead class="cs-thead">
+                    <tr class="cs-tr">
+                        <th class="cs-th" scope="col">Age Group</th>
+                        <th class="cs-th" scope="col">Tryout Time</th>
+                        <th class="cs-th" scope="col">Register</th>
+                    </tr>
+                </thead>
+                <tbody class="cs-tbody">
+                    <tr class="cs-tr">
+                        <th class="cs-th" scope="row">10 & UP</th>
+                        <td class="cs-td">10:00 AM - 11:30 AM</td>
+                        <td class="cs-td">
+                            <a data-modal-open="registration-modal-1" class="cs-cta" aria-label="click to register">Join Now</a>
+                        </td>
+                    </tr>
+                    <tr class="cs-tr">
+                        <th class="cs-th" scope="row">12 & UP</th>
+                        <td class="cs-td">12:00 PM - 2:00 PM</td>
+                        <td class="cs-td">
+                            <a data-modal-open="registration-modal-2" class="cs-cta" aria-label="click to register">Join Now</a>
+                        </td>
+                    </tr>
+                    <tr class="cs-tr">
+                        <th class="cs-th" scope="row">14 & UP</th>
+                        <td class="cs-td">2:30 PM - 4:00 PM</td>
+                        <td class="cs-td">
+                            <a data-modal-open="registration-modal-3" class="cs-cta" aria-label="click to register">Join Now</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--Table 2 - DATE 2-->
+        <div class="cs-table-wrapper" data-category="two">
+            <table class="cs-table">
+                <thead class="cs-thead">
+                    <tr class="cs-tr">
+                        <th class="cs-th" scope="col">Age Group</th>
+                        <th class="cs-th" scope="col">Tryout Time</th>
+                        <th class="cs-th" scope="col">Register</th>
+                    </tr>
+                </thead>
+                <tbody class="cs-tbody">
+                    <tr class="cs-tr">
+                        <th class="cs-th" scope="row">10 & UP</th>
+                        <td class="cs-td">10:00 AM - 11:30 AM</td>
+                        <td class="cs-td">
+                            <a data-modal-open="registration-modal-1" class="cs-cta" aria-label="click to register">Join Now</a>
+                        </td>
+                    </tr>
+                    <tr class="cs-tr">
+                        <th class="cs-th" scope="row">12 & UP</th>
+                        <td class="cs-td">12:00 PM - 2:00 PM</td>
+                        <td class="cs-td">
+                            <a data-modal-open="registration-modal-2" class="cs-cta" aria-label="click to register">Join Now</a>
+                        </td>
+                    </tr>
+                    <tr class="cs-tr">
+                        <th class="cs-th" scope="row">14 & UP</th>
+                        <td class="cs-td">2:30 PM - 4:00 PM</td>
+                        <td class="cs-td">
+                            <a data-modal-open="registration-modal-3" class="cs-cta" aria-label="click to register">Join Now</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <img class="cs-background" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/gym-table-bg.png" alt="background" height="1920" width="995" loading="lazy" decoding="async">
+
+    <!-- Registration Modals -->
+    <section id="contact-2061">
+        <div id="registration-modal-1" data-modal>
+        <div class="cs-wrapper cs-modal-content" data-modal-content>
+            <button data-modal-close class="cs-close" aria-label="close pop up">
+                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Close.svg" alt="close" width="24" height="24" aria-hidden="true">
+            </button>
+            <div class="cs-content">
+                    <span class="cs-topper">Age Group</span>
+                    <h2 class="cs-title">10 & UP</h2>
+                    <span class="cs-topper">Tryout Time</span>
+                    <h2 class="cs-title">10:00 AM - 11:30 AM</h2>
+                </div>
+            <form class="cs-form" id="cs-form-2061" name="10+ Tryout Form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+                <!-- Player Info -->
+                <label class="cs-label cs-topper">
+                    Player Information
+                </label>
+                <label class="cs-label">
+                    Full Name *
+                    <input class="cs-input" required type="text" id="name-2061" name="Name">
+                </label>
+                <label class="cs-label">
+                    Primary Position(s) *
+                    <input class="cs-input" required type="text" id="position-2061" name="Position">
+                </label>
+                <label class="cs-label">
+                    School *
+                    <input class="cs-input" required type="text" id="school-2061" name="School">
+                </label>
+                <!-- Payment -->
+                <label class="cs-label cs-topper">
+                    Registration Fees
+                </label>
+                <label class="cs-label">
+                    For registering online, we are offering $10 OFF your registration fee! <br> Pay just $40 today to get signed up:
+                    <!-- Zelle To: <em>Edward Goines</em> <em>470-213-0269</em> -->
+                </label>
+                <div class="cs-wrappers">
+                    <a href="https://cash.app/$BMETraining" target="_blank" class="cs-button-solid cs-submit cash-app" type="button">Pay Now Via Cash App</a>
+                </div>
+                <!-- <label class="cs-label">
+                    When can you start? *
+                    <input class="cs-input cs-date" required type="date" id="start-date-2061" name="Start Date">
+                </label> -->
+                <!-- Parent Conset-->
+                <label class="cs-label cs-topper">
+                    Parent/Guardian Information
+                </label>
+                <label class="cs-label">
+                    Parent/Guardian Full Name *
+                    <input class="cs-input" required type="text" id="parent-2061" name="Parent">
+                </label>
+                <label class="cs-label cs-split">
+                    Parent/Guardian Phone # *
+                    <input class="cs-input" required type="tel" id="parent-phone-2061" name="Parent Number">
+                </label>
+                <label class="cs-label cs-split">
+                    Parent/Guardian Email *
+                    <input class="cs-input" required type="email" id="parent-email-2061" name="Parent Email">
+                </label>
+                <!-- </label><label class="cs-label">
+                    Parent/Guardian Signature *
+                    <input class="cs-input" required type="text-area" id="parent-2061" name="Parent">
+                </label> -->
+                </label><label class="cs-label cs-split">
+                    Date *
+                    <input class="cs-input" required type="date" id="date-2061" name="Date">
+                </label>
+                </label><label class="cs-label cs-split">
+                    $25 Registration Payment Sent? *
+                    <input class="cs-input" required type="checkbox" id="check-2061" name="Checkbox">
+                </label>
+                <div class="cs-wrappers">
+                    <button class="cs-button-solid cs-submit" type="submit">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+        </div>    
+
+        <div id="registration-modal-2" data-modal>
+            <div class="cs-wrapper cs-modal-content" data-modal-content>
+            <button data-modal-close class="cs-close" aria-label="close pop up">
+                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Close.svg" alt="close" width="24" height="24" aria-hidden="true">
+            </button>
+            <div class="cs-content">
+                    <span class="cs-topper">Age Group</span>
+                    <h2 class="cs-title">12 & UP</h2>
+                    <span class="cs-topper">Tryout Time</span>
+                    <h2 class="cs-title">12:00 PM - 2:00 PM</h2>
+                </div>
+            <form class="cs-form" id="cs-form-2061" name="12+ Tryout Form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+                <!-- Player Info -->
+                <label class="cs-label cs-topper">
+                    Player Information
+                </label>
+                <label class="cs-label">
+                    Full Name *
+                    <input class="cs-input" required type="text" id="name-2061" name="Name">
+                </label>
+                <label class="cs-label">
+                    Primary Position(s) *
+                    <input class="cs-input" required type="text" id="position-2061" name="Position">
+                </label>
+                <label class="cs-label">
+                    School *
+                    <input class="cs-input" required type="text" id="school-2061" name="School">
+                </label>
+                <!-- Payment -->
+                <label class="cs-label cs-topper">
+                    Registration Fees
+                </label>
+                <label class="cs-label">
+                    For registering online, we are offering $10 OFF your registration fee! <br> Pay just $40 today to get signed up:
+                    <!-- Zelle To: <em>Edward Goines</em> <em>470-213-0269</em> -->
+                </label>
+                <div class="cs-wrappers">
+                    <a href="https://cash.app/$BMETraining" target="_blank" class="cs-button-solid cs-submit cash-app" type="button">Pay Now Via Cash App</a>
+                </div>
+                <!-- <label class="cs-label">
+                    When can you start? *
+                    <input class="cs-input cs-date" required type="date" id="start-date-2061" name="Start Date">
+                </label> -->
+                <!-- Parent Conset-->
+                <label class="cs-label cs-topper">
+                    Parent/Guardian Information
+                </label>
+                <label class="cs-label">
+                    Parent/Guardian Full Name *
+                    <input class="cs-input" required type="text" id="parent-2061" name="Parent">
+                </label>
+                <label class="cs-label cs-split">
+                    Parent/Guardian Phone # *
+                    <input class="cs-input" required type="tel" id="parent-phone-2061" name="Parent Number">
+                </label>
+                <label class="cs-label cs-split">
+                    Parent/Guardian Email *
+                    <input class="cs-input" required type="email" id="parent-email-2061" name="Parent Email">
+                </label>
+                <!-- </label><label class="cs-label">
+                    Parent/Guardian Signature *
+                    <input class="cs-input" required type="text-area" id="parent-2061" name="Parent">
+                </label> -->
+                </label><label class="cs-label cs-split">
+                    Date *
+                    <input class="cs-input" required type="date" id="date-2061" name="Date">
+                </label>
+                </label><label class="cs-label cs-split">
+                    $25 Registration Payment Sent? *
+                    <input class="cs-input" required type="checkbox" id="check-2061" name="Checkbox">
+                </label>
+                <div class="cs-wrappers">
+                    <button class="cs-button-solid cs-submit" type="submit">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+        <div id="registration-modal-3" data-modal>
+            <div class="cs-wrapper cs-modal-content" data-modal-content>
+            <button data-modal-close class="cs-close" aria-label="close pop up">
+                <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Close.svg" alt="close" width="24" height="24" aria-hidden="true">
+            </button>
+            <div class="cs-content">
+                    <span class="cs-topper">Age Group</span>
+                    <h2 class="cs-title">14 & UP</h2>
+                    <span class="cs-topper">Tryout Time</span>
+                    <h2 class="cs-title">2:30 PM - 4:00 PM</h2>
+                </div>
+            <form class="cs-form" id="cs-form-2061" name="14+ Tryout Form" method="post" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+                <!-- Player Info -->
+                <label class="cs-label cs-topper">
+                    Player Information
+                </label>
+                <label class="cs-label">
+                    Full Name *
+                    <input class="cs-input" required type="text" id="name-2061" name="Name">
+                </label>
+                <label class="cs-label">
+                    Primary Position(s) *
+                    <input class="cs-input" required type="text" id="position-2061" name="Position">
+                </label>
+                <label class="cs-label">
+                    School *
+                    <input class="cs-input" required type="text" id="school-2061" name="School">
+                </label>
+                <!-- Payment -->
+                <label class="cs-label cs-topper">
+                    Registration Fees
+                </label>
+                <label class="cs-label">
+                    For registering online, we are offering $10 OFF your registration fee! <br> Pay just $40 today to get signed up:
+                    <!-- Zelle To: <em>Edward Goines</em> <em>470-213-0269</em> -->
+                </label>
+                <div class="cs-wrappers">
+                    <a href="https://cash.app/$BMETraining" target="_blank" class="cs-button-solid cs-submit cash-app" type="button">Pay Now Via Cash App</a>
+                </div>
+                <!-- <label class="cs-label">
+                    When can you start? *
+                    <input class="cs-input cs-date" required type="date" id="start-date-2061" name="Start Date">
+                </label> -->
+                <!-- Parent Conset-->
+                <label class="cs-label cs-topper">
+                    Parent/Guardian Information
+                </label>
+                <label class="cs-label">
+                    Parent/Guardian Full Name *
+                    <input class="cs-input" required type="text" id="parent-2061" name="Parent">
+                </label>
+                <label class="cs-label cs-split">
+                    Parent/Guardian Phone # *
+                    <input class="cs-input" required type="tel" id="parent-phone-2061" name="Parent Number">
+                </label>
+                <label class="cs-label cs-split">
+                    Parent/Guardian Email *
+                    <input class="cs-input" required type="email" id="parent-email-2061" name="Parent Email">
+                </label>
+                <!-- </label><label class="cs-label">
+                    Parent/Guardian Signature *
+                    <input class="cs-input" required type="text-area" id="parent-2061" name="Parent">
+                </label> -->
+                </label><label class="cs-label cs-split">
+                    Date *
+                    <input class="cs-input" required type="date" id="date-2061" name="Date">
+                </label>
+                </label><label class="cs-label cs-split">
+                    $25 Registration Payment Sent? *
+                    <input class="cs-input" required type="checkbox" id="check-2061" name="Checkbox">
+                </label>
+                <div class="cs-wrappers">
+                    <button class="cs-button-solid cs-submit" type="submit">Submit Registration</button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </section>
+
+</section>
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-1785">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Ready to Really Test Your Game?</span>
+            <h1 class="cs-title">Welcome to <br> BME ACADEMY</h1>
+            <p class="cs-text">
+                Develop confidence, composure under pressure and the discipline needed to be a champ. This is the club you’ve been looking for.
+            </p>
+            <div class="cs-button-group">
+                <a href="" class="cs-button-solid cs-button1">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-hero.jpg">
+        <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-hero.jpg">
+        <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-hero.jpg" alt="field" width="1920" height="1200" aria-hidden="true">
+    </picture>
+
+    <img class="cs-graphic" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Graphics/white-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+    <!--This is a dark version. Download the image and change the fill color to match the color of the section background below it-->
+    <img class="cs-graphic cs-graphic-dark" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Graphics/dark-mode-splatter2.svg" alt="graphic" height="161" width="1920" loading="lazy" decoding="async" >
+</section>
+
+<!-- ============================================ -->
+<!--                 Why Choose Us                -->
+<!-- ============================================ -->
+
+<section id="why-choose-1824">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/People/gym5.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/Images/People/gym5.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/People/gym5.jpg" alt="body builder" width="562" height="568">
+            </picture>
+            <picture class="cs-floater">
+                <img class="cs-floater-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/weights.svg" alt="icon" width="59" height="48">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">What You Get When You</span>
+            <h2 class="cs-title">Choose BME 7v7</h2>
+        </div>
+        <div class="cs-flex">
+            <div class="cs-box">
+                <div class="cs-box-content" data-box="one">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Our Mission & Approach</h3>
+                    <p class="cs-box-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio ab officiis vel tenetur dolorem facilis odit cum molestias aperiam!
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="two">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">State of The Art Equipment</h3>
+                    <p class="cs-box-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea distinctio ab officiis vel tenetur dolorem facilis odit cum molestias aperiam!
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="three">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Professional Exposure</h3>
+                    <p class="cs-box-text">
+                        Molestiae illo odit eum iure quas error autem quibusdam in natus iste tenetur molestias expedita pariatur, modi qui.
+                    </p>
+                </div>
+                <div class="cs-box-content cs-hidden" data-box="four">
+                    <img class="cs-box-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/red-house.svg" alt="icon" width="62" height="62">
+                    <h3 class="cs-h3">Compete Across the Nation</h3>
+                    <p class="cs-box-text">
+                        Dicta cupiditate facilis ipsam impedit voluptatibus possimus iure ut distinctio, quo nisi. Adipisci, quos officiis asperiores quaerat delectus deserunt.
+                    </p>
+                </div>
+            </div>
+            <div class="cs-button-group">
+                <button class="cs-button cs-active" data-filter="one">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/house-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Our Mission & Approach</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="two">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/hourglass-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">State of the Art Training and Equipment</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="three">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/book-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">National Scouting Exposure</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+                <button class="cs-button" data-filter="one">
+                    <picture class="cs-icon-wrapper">
+                        <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/invoice-1a.svg" alt="icon" width="32" height="32">
+                    </picture>
+                    <span class="cs-button-text">Compete All Across the Country</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/gym-arrow.svg" alt="icon" width="32" height="32">
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--                    Events                    -->
+<!-- ============================================ -->
+
+<section id="events-1764">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Upcoming Events</span>
+            <h2 class="cs-title">Winter-Spring 2026</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-2.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-2.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-2.jpg" alt="people" width="305" height="180">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">BME @ Cambridge Academy</h3>
+                    <div class="cs-details">
+                        <span class="cs-opening">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/gym-event-calendar.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Date:</span> December 31, 2025
+                        </span>
+                        <span class="cs-time">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/gym-event-clock.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Game Time:</span> 6:00 PM - 9:00 PM
+                        </span>
+                    </div>
+                    <div class="cs-bar"></div>
+                </div>
+                <div class="cs-instructor">
+                    <!-- <picture class="cs-portrait">
+                        <img src="/assets/images/dog-logo.png" alt="portrait" height="32" width="32" loading="lazy" decoding="async">
+                    </picture> -->
+                    <div class="cs-instructor-info">
+                        <h3 class="cs-name">Ticket Price</h3>
+                        <!-- <span class="cs-job">Instructor</span> -->
+                    </div>
+                    <span class="cs-price">$15</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-3.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-3.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-3.jpg" alt="people" width="305" height="180">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">Jacksonville, FL Tournament</h3>
+                    <div class="cs-details">
+                        <span class="cs-opening">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/gym-event-calendar.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Dates:</span> Feb 17, 2026 - Feb 19, 2026
+                        </span>
+                        <span class="cs-time">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/gym-event-clock.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Games Start:</span> 12:00 PM
+                        </span>
+                    </div>
+                    <div class="cs-bar"></div>
+                </div>
+                <div class="cs-instructor">
+                    <!-- <picture class="cs-portrait">
+                        <img src="/assets/images/dog-logo.png" alt="portrait" height="32" width="32" loading="lazy" decoding="async">
+                    </picture> -->
+                    <div class="cs-instructor-info">
+                        <h3 class="cs-name">Weekend Ticket Price</h3>
+                        <!-- <span class="cs-job">Instructor</span> -->
+                    </div>
+                    <span class="cs-price">$50</span>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-4.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-4.jpg">
+                    <img loading="lazy" decoding="async" src="https://csimages2.nyc3.digitaloceanspaces.com/Images/People/gym-service-4.jpg" alt="people" width="305" height="180">
+                </picture>
+                <div class="cs-info">
+                    <h3 class="cs-h3">BME Spring Fundraiser</h3>
+                    <div class="cs-details">
+                        <span class="cs-opening">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/gym-event-calendar.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Date:</span> March 14, 2026
+                        </span>
+                        <span class="cs-time">
+                            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Icons/gym-event-clock.svg" alt="icon" width="24" height="24" aria-hidden="true">
+                            <span class="cs-bold">Event Time:</span> 10:00 AM - 6:00 PM
+                        </span>
+                    </div>
+                    <div class="cs-bar"></div>
+                </div>
+                <div class="cs-instructor">
+                    <!-- <picture class="cs-portrait">
+                        <img src="https://csimages2.nyc3.digitaloceanspaces.com/Images/Icons/gym-portrait.jpg" alt="portrait" height="32" width="32" loading="lazy" decoding="async">
+                    </picture> -->
+                    <div class="cs-instructor-info">
+                        <h3 class="cs-name">Entrance Cost</h3>
+                        <!-- <span class="cs-job">Instructor</span> -->
+                    </div>
+                    <span class="cs-price">FREE</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+                                                                
+                                
+<!-- ============================================ -->
+<!--                    CTA                       -->
+<!-- ============================================ -->
+
+<section id="cta-1192">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Want to Support Us?</span>
+            <h2 class="cs-title">We are now taking donations!</h2>
+            <a href="" class="cs-button-solid">Donate Today</a>
+        </div>
+        <!--To make an image like this one, use https://www.remove.bg/ to remove the background of any image-->
+        <picture class="cs-image">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/trophies.png">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/trophies.png">
+            <img loading="lazy" decoding="async" src="/assets/images/trophies.png" alt="yellow car" width="779" height="482">
+        </picture>
+    </div>
+    <!--Tire Screech-->
+    <picture class="cs-graphic-wrapper">
+        <img class="cs-graphic" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/tire-screech2.svg" alt="tire screech" width="1462" height="434">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section id="reviews-1192">
+    <div class="cs-container">
+        <!--Person-->
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="/assets/images/about/coach-e.jpg">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="/assets/images/about/coach-e.jpg">
+            <img loading="lazy" decoding="async" src="/assets/images/about/coach-e.jpg" alt="man in suit" width="738" height="493">
+        </picture>
+        <div class="cs-review-group">
+            <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/Images/Graphics/red-quotes.svg" alt="red quotes" width="97" height="80" aria-hidden="true">
+            <p class="cs-review-text">
+                When you think about collecting customer feed back, it’s easy to get overwhelmed by the sheer volume of . With so many more customers and so many ways to connect with their feedback it’s hard to know to where to start.
+            </p>
+            <div class="cs-info">
+                <img class="cs-profile" loading="lazy" decoding="async" src="/assets/images/IMG_3581.jpg" alt="profile" width="50" height="50" aria-hidden="true">
+                <div class="cs-flex">
+                    <span class="cs-name">Coach E</span>
+                    <span class="cs-desc">Founder Of BME Recruiting</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+                                
+                                
+                                                                                          
+                                
+<script type="text/javascript" src="/assets/js/7v7.js"></script>
+{% endblock %}
